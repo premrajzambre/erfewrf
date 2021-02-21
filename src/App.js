@@ -13,7 +13,7 @@ const timeApi = {
 let lat = "";
 let lon = "";
 let format = '';
-let tBack = ';'
+let tBack = ''
 
 function App() {
   const [query, setQuery] = useState('');
@@ -67,7 +67,7 @@ function App() {
   }
 
   return (
-    <div className={(typeof weather.main != "undefined") ? (((weather.main.temp-271.15) < 16) ? 'app sunny' : 'app coldDay') : 'app'}>
+    <div className={(typeof weather.main != "undefined") ? (((weather.main.temp-271.15) > 17) ? 'app sunny' : 'app coldDay') : 'app'}>
       <main>
         <div className="search-box">
           <input

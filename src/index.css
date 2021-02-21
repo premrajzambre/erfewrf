@@ -39,19 +39,23 @@ code {
 }
 
 .coldNight{
-  background-image: url('./Assests/coldnight.jpg');
+  background-image: url('./Assests/bonfire.jpg');
 }
 
-.app .rainy{
-  background-image: url('./Assests/rainy.jpg');
+.rainyDay{
+  background-image: url('./Assests/rainyday.jpg');
 }
 
-.app .cloudDay{
+.rainyNight{
+  background-image: url('./Assests/rainynight.jpg');
+}
+
+.cloudDay{
   background-image: url('./Assests/cloudy.jpg');
 }
 
-.app .cloudNight{
-  background-image: url('./Assests/nightcloudy.jpg');
+.cloudNight{
+  background-image: url('./Assests/cloudynight.jpg');
 }
 
 main{
