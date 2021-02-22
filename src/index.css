@@ -27,7 +27,7 @@ code {
 }
 
 .sunny{
-  background-image: url('./Assests/sunny.jpeg');
+  background-image: url('./Assests/sunny1.jpg');
 }
 
 .night{
@@ -84,6 +84,7 @@ main{
   color: #313131;
   font-size: 20px;
   transition: 0.4s ease;
+  backdrop-filter: blur(40px);
 }
 
 .search-box .search-bar:focus{

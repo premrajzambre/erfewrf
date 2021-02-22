@@ -66,8 +66,56 @@ function App() {
     return `${day}, ${month} ${date} ${year}`
   }
 
+  function appSelect(season){
+    if(season == 'Clear' || season == 'Snow')
+    {
+      if((weather.main.temp-273.15) < 17)
+      {
+        if(tBack[0]>6 && tBack[0]<19)
+        {
+          return 'app coldDay';
+        }
+        else
+        {
+          return 'app coldNight';
+        }
+      }
+      else
+      {
+        if(tBack[0]>6 && tBack[0]<19)
+        {
+          return 'app sunny';
+        }
+        else
+        {
+          return 'app night';
+        }
+      }
+    }
+    else if (season == "Rain") {
+      if(tBack[0]>6 && tBack[0]<19)
+      {
+        return 'app rainyDay';
+      }
+      else
+      {
+        return 'app rainyNight';
+      }
+    }
+    else if (season == 'Clouds') {
+      if(tBack[0]>6 && tBack[0]<19)
+      {
+        return 'app cloudDay';
+      }
+      else
+      {
+        return 'app cloudNight';
+      }
+    }
+  }
+
   return (
-    <div className={(typeof weather.main != "undefined") ? (((weather.main.temp-271.15) > 17) ? 'app sunny' : 'app coldDay') : 'app'}>
+    <div className={(typeof weather.main != "undefined") ? appSelect(weather.weather[0].main) : 'app'}>
       <main>
         <div className="search-box">
           <input
@@ -86,7 +134,7 @@ function App() {
             <div className="date">{dateBuilder(new Date())}</div>
           </div>
           <div className="weather-box">
-            <div className="temp">{Math.round(weather.main.temp-271.15)}°c</div>
+            <div className="temp">{Math.round(weather.main.temp-273.15)}°c</div>
             <div className="weather">{weather.weather[0].main}</div>
           </div>
           <div className="time-box">
